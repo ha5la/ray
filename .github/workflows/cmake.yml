@@ -46,8 +46,8 @@ jobs:
       shell: bash
       run: |
         if [ "$RUNNER_OS" == "Linux" ]; then
-          sudo apt update
-          sudo apt install --yes g++-multilib nasm
+          sudo apt-get update
+          sudo apt-get install --yes g++-multilib nasm
         elif [ "$RUNNER_OS" == "macOS" ]; then
           brew install nasm zopfli
         fi
@@ -93,8 +93,8 @@ jobs:
     - name: Measure
       run: |
         sudo dpkg --add-architecture i386
-        sudo apt update
-        sudo apt install --yes valgrind:i386
+        sudo apt-get update
+        sudo apt-get install --yes valgrind:i386
         ./benchmark.sh > output.txt
 
     # gh-pages branch is updated and pushed automatically with extracted benchmark data
