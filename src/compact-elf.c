@@ -150,7 +150,7 @@ int main(int argc, char* argv[]) {
 	int paq_offset = -1;
 	int paq_shift = -1;
 	fscanf(fp, "P offset=%d shift=%d\n", &paq_offset, &paq_shift);
-	fclose(fp);
+	pclose(fp);
 
 	fp = fopen(paq_filename, "rb");
 	int paq_size = -1;
