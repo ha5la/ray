@@ -1,6 +1,7 @@
 name: CMake
 
 on:
+  workflow_dispatch: # enable manual trigger
   push:
     tags: [ v* ]
     branches: [ master ]
