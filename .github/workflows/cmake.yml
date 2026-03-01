@@ -21,9 +21,9 @@ jobs:
     strategy:
       matrix:
         include:
-        - asset_name: ray-macos-amd64
-          os: macos-latest
-          artifact_name: build/ray.compact
+#        - asset_name: ray-macos-amd64
+#          os: macos-latest
+#          artifact_name: build/ray.compact
         - asset_name: ray-windows-x86.exe
           os: windows-latest
           artifact_name: build/MinSizeRel/ray.exe
